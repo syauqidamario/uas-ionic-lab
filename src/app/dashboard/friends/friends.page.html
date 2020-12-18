@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Friends List</ion-title>
+    <ion-buttons slot="primary">
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="./addfriends">
+        <ion-icon name="add-outline"></ion-icon>
+        <ion-buttons>
+          <ion-back-button defaultHref="dashboard"></ion-back-button>
+        </ion-buttons>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-searchbar [formControl]="searchControl" placeholder="Search">
+      </ion-searchbar>
+    </ion-row>
+    <ion-list *ngFor="let f of friendList" lines="none">
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img [src]="f.foto"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <ion-text>{{ f.name }}</ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-buttons>
+      <ion-back-button defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Locations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="block">Check In</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div #map id="map">
+
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="showCurrentLocation()">
+    <ion-fab-button>
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

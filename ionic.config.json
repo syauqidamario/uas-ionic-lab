@@ -1,0 +1,7 @@
+{
+  "name": "uas-ionic-lab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
